@@ -1,0 +1,29 @@
+{
+    "actorSpecification": 1,
+    "name": "ebay-marketplace-analyzer",
+    "title": "eBay Marketplace Analyzer",
+    "description": "Search and analyze eBay marketplace data. Extract product listings, prices, seller info, and sold items.",
+    "version": "1.0.0",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "eBay Products Dataset",
+            "views": {
+                "products": {
+                    "title": "Products",
+                    "transformation": {
+                        "fields": ["title", "price", "condition", "seller", "seller_rating", "shipping", "location", "sold"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "pageSize": 20
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "input": "./input_schema.json",
+    "dockerfile": "./Dockerfile"
+}
