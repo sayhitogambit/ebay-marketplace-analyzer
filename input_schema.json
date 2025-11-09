@@ -110,6 +110,20 @@
             "editor": "select",
             "sectionCaption": "Output Settings",
             "sectionDescription": "Configure output format"
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Configure Apify Proxy (usually not needed for eBay)",
+            "editor": "proxy",
+            "sectionCaption": "Proxy Settings",
+            "sectionDescription": "Configure proxy if needed",
+            "default": {
+                "useApifyProxy": false
+            },
+            "prefill": {
+                "useApifyProxy": false
+            }
         }
     },
     "required": ["search_query"]
